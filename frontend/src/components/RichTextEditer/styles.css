@@ -1,0 +1,41 @@
+.tiptap {
+    color: var(--ig-primary-text);
+    padding: 0 16px;
+    max-height: 168px;
+    height: 168px;
+    overflow-y: auto;
+    font-size: 16px;
+    line-height: 24px;
+    tab-size: 1;
+}
+
+.tiptap:first-child {
+    margin-top: 0;
+}
+
+.tiptap .mention {
+    background-color: rgba(88, 5, 255, 0.05);
+    border-radius: 0.4rem;
+    box-decoration-break: clone;
+    color: var(--ig-link);
+    cursor: default;
+    padding: 0.1rem 0.3rem;
+}
+
+.tiptap .hashtag {
+    background-color: rgba(0, 150, 136, 0.1);
+    border-radius: 0.4rem;
+    box-decoration-break: clone;
+    cursor: default;
+    color: var(--ig-link);
+    padding: 0.1rem 0.3rem;
+}
+
+.tiptap .mention::after {
+    content: '\200B';
+}
+
+.ProseMirror-focused {
+    border: none;
+    outline: none;
+}

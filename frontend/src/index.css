@@ -1,0 +1,824 @@
+@import '../app/globals.css';
+@import './styles/filters.css';
+@import './components/RichTextEditer/MentionList.css';
+@import './components/RichTextEditer/styles.css';
+@import './pages/CreatePost/CreateNewPost/RightCreatePost.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    --font-family-system: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+        Helvetica, Arial, sans-serif;
+    --line-height: 18px;
+    --font-weight: 400;
+
+    --text-color-light: #213547;
+    --text-color-dark: rgba(255, 255, 255, 0.87);
+    --bg-color-light: #ffffff;
+    --bg-color-dark: #000;
+
+    --link-color: #646cff;
+    --link-hover-color-light: #747bff;
+    --link-hover-color-dark: #535bf2;
+
+    --button-bg-color: #1a1a1a;
+    --button-hover-color: #646cff;
+    --button-light-bg-color: #f9f9f9;
+
+    --nav-narrow-width: 72px;
+    --nav-medium-width: 244px;
+
+    --ig-primary-background: rgba(255, 255, 255);
+    --ig-secondary-background: rgba(245, 245, 245);
+    --ig-hover-overlay: rgba(0, 0, 0, 0.05);
+    --ig-active-overlay: rgba(255, 255, 255, 0.8);
+    --ig-primary-text: rgba(0, 0, 0);
+    --ig-secondary-text: rgba(115, 115, 115);
+    --ig-tertiary-text: rgba(199, 199, 199);
+    --ig-primary-icon: rgba(38, 38, 38);
+    --ig-secondary-icon: rgba(142, 142, 142);
+    --ig-primary-button: rgba(0, 149, 246);
+    --ig-primary-button-hover: rgba(24, 119, 242);
+    --ig-secondary-button: rgba(38, 38, 38);
+    --ig-secondary-button-background: rgba(239, 239, 239);
+    --ig-secondary-button-hover: rgba(219, 219, 219);
+    --ig-elevated-background: rgba(255, 255, 255);
+    --ig-elevated-separator: rgba(219, 219, 219);
+    --ig-separator: rgba(219, 219, 219);
+    --ig-bubble-background: rgba(255, 255, 255);
+    --ig-tertiary-icon: rgba(199, 199, 199);
+    --messenger-card-background: rgba(255, 255, 255);
+    --ig-stroke-on-media: rgba(255, 255, 255);
+    --ig-error-or-destructive: rgba(237, 73, 86);
+    --ig-highlight-background: rgba(239, 239, 239);
+    --ig-text-input-border-prism: rgba(219, 223, 228);
+    --ig-colors-button-borderless-text: rgba(65, 80, 247);
+    --ig-colors-button-borderless-text--pressed: rgba(31, 40, 173);
+    --ig-bg-active-secondary: #0000001a;
+    --ig-bg-call: #1f1f1f;
+    --ig-color-call: #b0b3b8;
+    --ig-bg-button-call: #4c4c4c;
+    --ig-bg-button-hover-call: #a1a1a1;
+    --disabled-icon: #bcc0c4;
+    --enabled-icon: #e4e6eb;
+    --primary-icon: #e4e6eb;
+    --secondary-icon: #b0b3b8;
+    --primary-text: #e4e6eb;
+    --secondary-text: #b0b3b8;
+    --circle-button-normal-background-color: rgba(255, 255, 255, 0.18);
+    --web-wash: #1a1a1a;
+    --primary-button-background: #0095f6;
+    --chat-composer-button-color: #0084ff;
+    --press-overlay: rgba(0, 0, 0, 0.1);
+    --ig-colors-button-borderless-text: rgba(65, 80, 247);
+    --ig-background-opacity-10: rgba(0, 0, 0, 0.1);
+    --ig-banner-background: rgb(255, 255, 255);
+    --ig-toggle-background-on-prism: rgba(12, 16, 20);
+    --ig-toggle-background-off-prism: rgba(219, 223, 228);
+    --ig-bg-setting-hover: rgba(0, 0, 0, 0.05);
+    --ig-stroke-prism: rgba(255, 255, 255);
+    --ig-hover-btn-overlay: rgba(60, 60, 60);
+    --tos-box-shadow: 255, 255, 255;
+    --ig-text-on-media: rgba(255, 255, 255);
+    --ig-badge: rgba(255, 48, 64);
+    --ig-link: rgba(0, 55, 107);
+    --ig-icon-circle: #c7c7c7;
+    --ig-icon-search: #a1a1a1;
+    --ig-elevated-highlight-background: rgba(239, 239, 239);
+    --ig-error-or-destructive: rgba(237, 73, 86);
+    --web-always-black: rgba(0, 0, 0);
+    --web-always-white: rgba(255, 255, 255);
+    --chat-composer-button-color: #0084ff;
+    --web-secondary-action: rgba(224, 241, 255);
+    --disabled-icon: #bcc0c4;
+    --post-separator: rgba(239, 239, 239);
+    --black-a9: #000000b3;
+    --grey-2: 219, 219, 219;
+    --grey-2-2: #dbdbdb33;
+    --grey-2-3: #dbdbdb4d;
+    --soft-gray: #f8f8f8;
+    --grey-0: rgba(245, 245, 245);
+    --grey-1: rgba(239, 239, 239);
+    --grey-2: rgba(219, 219, 219);
+    --grey-3: rgba(199, 199, 199);
+    --grey-4: rgba(168, 168, 168);
+    --grey-5: rgba(142, 142, 142);
+    --grey-6: rgba(115, 115, 115);
+    --grey-7: rgba(85, 85, 85);
+    --grey-8: rgba(54, 54, 54);
+    --grey-9: rgba(38, 38, 38);
+    --grey-10: rgba(26, 26, 26);
+    --gray-a3: #545454a3;
+    --blue-2: rgba(179, 219, 255);
+    --black-25: rgba(25, 25, 25);
+    --black-26-08: rgba(26, 26, 26, 0.8);
+    --while-255-01: rgba(255, 255, 255, 0.1);
+    --text-body: rgb(54, 49, 61);
+    --detail-medium-contrast: rgb(234, 234, 234);
+    --text-medium-contrast-rgb-value: 202, 202, 202;
+    --text-high-contrast-rgb-value: 230, 230, 230;
+    --collection-coating: linear-gradient(
+        to top,
+        rgba(38, 38, 38, 0.6),
+        rgba(255, 255, 255, 0)
+    );
+    --placeholder-search: #989898;
+    --bg-moreOption-ac: #0000001a;
+    --mwp-message-row-background: var(--messenger-card-background);
+    --bg-add-media: rgba(134, 142, 153, 0.25);
+    --bg-reels-audio: rgba(219, 219, 219, 0.08);
+    --placeholder-input: rgba(158, 158, 158);
+    --border-reels-audio: rgba(255, 255, 255, 0.04);
+    --ig-colors-button-borderless-text: rgba(65, 80, 247);
+    /*  */
+    --ig-active-text: rgba(85, 85, 85);
+    --ig-stroke: rgba(85, 85, 85);
+    /*  */
+    --desktop-story-tray-bottom-margin: 48px;
+    --desktop-story-tray-bottom-margin-denser: 24px;
+
+    --feed-sidebar-width: 319px;
+    --feed-sidebar-padding: 32px;
+    --feed-sidebar-padding-familiar: 64px;
+
+    --revamp-feed-card-media-min-width: 390px;
+    --revamp-feed-card-dense-padding: 16px;
+    --revamp-feed-item-spacing: 20px;
+
+    --web-always-black-1: 0, 0, 0;
+
+    --creation-header-height: 43px;
+    --creation-min-padding-x: 32px;
+    --creation-modal-max-height: 898px;
+    --creation-modal-min-height: 391px;
+    --creation-padding-x: 64px;
+    --creation-padding-y: 112px;
+    --creation-settings-width: 340px;
+
+    --polaris-site-width-wide: 965px;
+
+    --explore-width-post: calc(33.3333% - 4px);
+
+    --full-width-minus-40: calc(100% - 40px);
+    --width-vw-88: calc(100vw - 88px);
+    --max-h-40: calc(100% - 40px);
+    --full-48px: calc(100% - 48px);
+    --full-32px: calc(100% - 32px);
+    --full-28px: calc(100% - 28px);
+    --full-40px: calc(100% - 40px);
+    --full-54px: calc(100% - 54px);
+    --vh-40: calc(100vh - 40px);
+    --max-w-model: calc(100% - 64px - 64px);
+    --max-h-model: calc(100vh - 40px);
+    --calc-100vw-88px: calc(100vw - 88px);
+    --calc-100-40px: calc(100% - 40px);
+
+    --scrollable-content-header-height: 44px;
+
+    --media-info: 335px;
+
+    --polaris-site-padding-top: 30px;
+    --polaris-site-width-wide: 935px;
+
+    /* --max-w-model: calc(100vw - 40px); */
+    --max-w-create-model: 771px;
+    --max-h-create-model: 814px;
+    --min-w-create-model: 348px;
+    --min-h-create-model: 391px;
+    --max-h-post-model: calc(100vh - 40px);
+    --w-create-model: 523px;
+    --w-create-model: 523px;
+    --h-mess-head-rightbar: 75px;
+
+    --max-w-media-message: 236px;
+    --max-h-media-message: 340px;
+
+    --h-chats: calc(100vh - var(--h-mess-head-rightbar));
+
+    --search-box-height: 40px;
+
+    --max-w-sidebar-mess: 398px;
+
+    --scrollable-content-header-height-large: 72px;
+    --scrollable-content-header-height-med: 49px;
+    --scrollable-content-header-height: 44px;
+
+    --creation-settings-width: 340px;
+
+    --modal-border-radius: 12px;
+
+    --chat-incoming-message-bubble-background-color: rgb(
+        var(--ig-highlight-background)
+    );
+    --chat-incoming-message-text-color: rgb(var(--ig-primary-text));
+    --chat-admin-text-color: rgb(138, 141, 145);
+
+    --mwp-message-row-background: var(--messenger-card-background);
+
+    --placeholder-text: #65676b;
+
+    color-scheme: light dark;
+}
+
+.dark {
+    --text-color-light: #213547;
+    --text-color-dark: rgba(255, 255, 255, 0.87);
+    --bg-color-light: #ffffff;
+    --bg-color-dark: #000;
+
+    --link-color: #646cff;
+    --link-hover-color-light: #747bff;
+    --link-hover-color-dark: #535bf2;
+
+    --button-bg-color: #1a1a1a;
+    --button-hover-color: #646cff;
+    --button-light-bg-color: #f9f9f9;
+
+    --nav-narrow-width: 72px;
+    --nav-medium-width: 244px;
+
+    --ig-primary-background: rgba(0, 0, 0);
+    --ig-secondary-background: rgba(18, 18, 18);
+    --ig-hover-overlay: rgba(255, 255, 255, 0.1);
+    --ig-active-overlay: rgba(9, 9, 9);
+    --ig-active-text: rgba(85, 85, 85);
+    --ig-primary-text: rgba(245, 245, 245);
+    --ig-secondary-text: rgba(168, 168, 168);
+    --ig-tertiary-text: rgba(115, 115, 115);
+    --ig-primary-icon: rgba(245, 245, 245);
+    --ig-secondary-icon: rgba(142, 142, 142);
+    --ig-primary-button: rgba(0, 149, 246);
+    --ig-primary-button-hover: rgba(24, 119, 242);
+    --ig-secondary-button: rgba(250, 250, 250);
+    --ig-secondary-button-background: rgba(54, 54, 54);
+    --ig-secondary-button-hover: rgba(38, 38, 38);
+    --ig-elevated-background: rgba(38, 38, 38);
+    --ig-elevated-separator: rgba(54, 54, 54);
+    --ig-bubble-background: rgba(54, 54, 54);
+    --ig-tertiary-icon: rgba(115, 115, 115);
+    --messenger-card-background: rgba(0, 0, 0);
+    --ig-stroke: rgba(85, 85, 85);
+    --ig-stroke-on-media: rgba(255, 255, 255);
+    --ig-error-or-destructive: rgba(237, 73, 86);
+    --ig-highlight-background: rgba(38, 38, 38);
+    --ig-text-input-border-prism: rgba(43, 48, 54);
+    --ig-colors-button-borderless-text: rgba(112, 141, 255);
+    --ig-colors-button-borderless-text--pressed: rgba(163, 188, 255);
+    --ig-bg-active-secondary: #0000001a;
+    --ig-bg-setting-hover: rgba(255, 255, 255, 0.1);
+
+    --ig-bg-call: #1f1f1f;
+    --ig-color-call: #b0b3b8;
+    --ig-bg-button-call: #4c4c4c;
+    --ig-bg-button-hover-call: #a1a1a1;
+    --disabled-icon: rgba(255, 255, 255, 0.3);
+    --enabled-icon: #e4e6eb;
+    --primary-icon: #e4e6eb;
+    --secondary-icon: #b0b3b8;
+    --primary-text: #e4e6eb;
+    --secondary-text: #b0b3b8;
+
+    --circle-button-normal-background-color: rgba(255, 255, 255, 0.18);
+
+    --web-wash: #1a1a1a;
+
+    --primary-button-background: #429aff;
+
+    --chat-composer-button-color: #0084ff;
+
+    --press-overlay: rgba(255, 255, 255, 0.2);
+
+    --ig-colors-button-borderless-text: rgba(112, 141, 255);
+
+    --ig-background-opacity-10: rgba(0, 0, 0, 0.1);
+
+    --ig-banner-background: rgb(44, 44, 44);
+
+    --ig-tertiary-text: rgba(115, 115, 115);
+
+    --ig-toggle-background-on-prism: rgba(248, 249, 249);
+    --ig-toggle-background-off-prism: rgba(43, 48, 54);
+
+    --ig-stroke-prism: rgba(12, 16, 20);
+
+    --ig-hover-btn-overlay: rgba(60, 60, 60);
+
+    --tos-box-shadow: 255, 255, 255;
+
+    --ig-text-on-media: rgba(255, 255, 255);
+
+    --ig-separator: rgba(38, 38, 38);
+    --ig-badge: rgba(255, 48, 64);
+    --ig-link: rgba(224, 241, 255);
+    --ig-icon-circle: #c7c7c7;
+    --ig-icon-search: #a1a1a1;
+
+    --ig-error-or-destructive: rgba(237, 73, 86);
+
+    --mwp-message-row-background: var(--messenger-card-background);
+
+    --desktop-story-tray-bottom-margin: 48px;
+    --desktop-story-tray-bottom-margin-denser: 24px;
+
+    --feed-sidebar-width: 319px;
+    --feed-sidebar-padding: 32px;
+    --feed-sidebar-padding-familiar: 64px;
+
+    --revamp-feed-card-media-min-width: 390px;
+    --revamp-feed-card-dense-padding: 16px;
+    --revamp-feed-item-spacing: 20px;
+
+    --web-always-black-1: 0, 0, 0;
+    --web-always-black: rgba(0, 0, 0);
+    --web-always-white: rgba(255, 255, 255);
+
+    --chat-composer-button-color: #0084ff;
+
+    --web-secondary-action: rgba(224, 241, 255);
+
+    --disabled-icon: rgba(255, 255, 255, 0.3);
+
+    --post-separator: rgba(38, 38, 38);
+
+    --creation-header-height: 43px;
+    --creation-min-padding-x: 32px;
+    --creation-modal-max-height: 898px;
+    --creation-modal-min-height: 391px;
+    --creation-padding-x: 64px;
+    --creation-padding-y: 112px;
+    --creation-settings-width: 340px;
+
+    --polaris-site-width-wide: 965px;
+
+    --black-a9: #000000b3;
+    --grey-2: 219, 219, 219;
+    --grey-2-2: #dbdbdb33;
+    --grey-2-3: #dbdbdb4d;
+    --soft-gray: #f8f8f8;
+    --grey-0: rgba(245, 245, 245);
+    --grey-1: rgba(239, 239, 239);
+    --grey-2: rgba(219, 219, 219);
+    --grey-3: rgba(199, 199, 199);
+    --grey-4: rgba(168, 168, 168);
+    --grey-5: rgba(142, 142, 142);
+    --grey-6: rgba(115, 115, 115);
+    --grey-7: rgba(85, 85, 85);
+    --grey-8: rgba(54, 54, 54);
+    --grey-9: rgba(38, 38, 38);
+    --grey-10: rgba(26, 26, 26);
+    --gray-a3: #545454a3;
+    --blue-2: rgba(179, 219, 255);
+    --black-25: rgba(25, 25, 25);
+    --black-26-08: rgba(26, 26, 26, 0.8);
+    --while-255-01: rgba(255, 255, 255, 0.1);
+
+    --text-body: rgb(54, 49, 61);
+    --detail-medium-contrast: rgb(234, 234, 234);
+    --text-medium-contrast-rgb-value: 202, 202, 202;
+    --text-high-contrast-rgb-value: 230, 230, 230;
+
+    --collection-coating: linear-gradient(
+        to top,
+        rgba(38, 38, 38, 0.6),
+        rgba(255, 255, 255, 0)
+    );
+
+    --placeholder-search: #989898;
+
+    --bg-moreOption-ac: #0000001a;
+
+    --explore-width-post: calc(33.3333% - 4px);
+
+    --full-width-minus-40: calc(100% - 40px);
+    --width-vw-88: calc(100vw - 88px);
+    --max-h-40: calc(100% - 40px);
+    --full-48px: calc(100% - 48px);
+    --full-32px: calc(100% - 32px);
+    --full-28px: calc(100% - 28px);
+    --full-40px: calc(100% - 40px);
+    --full-54px: calc(100% - 54px);
+    --vh-40: calc(100vh - 40px);
+    --max-w-model: calc(100% - 64px - 64px);
+    --max-h-model: calc(100vh - 40px);
+    --calc-100vw-88px: calc(100vw - 88px);
+    --calc-100-40px: calc(100% - 40px);
+
+    --scrollable-content-header-height: 44px;
+
+    --media-info: 335px;
+
+    --polaris-site-padding-top: 30px;
+    --polaris-site-width-wide: 935px;
+
+    /* --max-w-model: calc(100vw - 40px); */
+    --max-w-create-model: 771px;
+    --max-h-create-model: 814px;
+    --min-w-create-model: 348px;
+    --min-h-create-model: 391px;
+    --max-h-post-model: calc(100vh - 40px);
+    --w-create-model: 523px;
+    --w-create-model: 523px;
+    --h-mess-head-rightbar: 75px;
+
+    --max-w-media-message: 236px;
+    --max-h-media-message: 340px;
+
+    --h-chats: calc(100vh - var(--h-mess-head-rightbar));
+
+    --search-box-height: 40px;
+
+    --max-w-sidebar-mess: 398px;
+
+    --ig-elevated-highlight-background: rgba(54 54 54);
+
+    --bg-add-media: rgba(134, 142, 153, 0.25);
+    --bg-reels-audio: rgba(219, 219, 219, 0.08);
+
+    --placeholder-input: rgba(158, 158, 158);
+
+    --border-reels-audio: rgba(255, 255, 255, 0.04);
+
+    --ig-colors-button-borderless-text: rgba(112, 141, 255);
+
+    --scrollable-content-header-height-large: 72px;
+    --scrollable-content-header-height-med: 49px;
+    --scrollable-content-header-height: 44px;
+
+    --creation-settings-width: 340px;
+
+    --modal-border-radius: 12px;
+
+    --chat-incoming-message-bubble-background-color: rgb(
+        var(--ig-highlight-background)
+    );
+    --chat-incoming-message-text-color: rgb(var(--ig-primary-text));
+    --chat-admin-text-color: rgb(138, 141, 145);
+
+    --mwp-message-row-background: var(--messenger-card-background);
+
+    --placeholder-text: #8a8d91;
+    
+    
+    /* Cấu hình chế độ sáng/tối */
+    color-scheme: light dark;
+    
+}
+
+html {
+    overflow-y: scroll;
+}
+
+/* Các thiết lập cho body */
+body {
+    @apply m-0 flex min-h-screen w-full min-w-[320px] items-center;
+    font-family: var(--font-family-system);
+    line-height: var(--line-height);
+    font-weight: var(--font-weight);
+    background-color: var(--ig-primary-background);
+    color: var(--text-color-light);
+    scrollbar-color: #ffffff #e0e0e0;
+}
+
+/* WebKit scrollbar (Chrome, Edge, Safari) */
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #e0e0e0;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 2px solid #e0e0e0;
+}
+.dark body {
+    scrollbar-color: #000000 #333333; /* Firefox */
+}
+
+.dark body::-webkit-scrollbar-track {
+    background: #333333;
+}
+
+.dark body::-webkit-scrollbar-thumb {
+    background-color: #000000;
+    border: 2px solid #333333;
+}
+
+#root {
+    @apply h-full w-full;
+}
+
+/* Các thiết lập cho liên kết (a) */
+/* a {
+    @apply font-medium no-underline;
+    color: var(--link-color);
+}
+a:hover {
+    color: var(--link-hover-color-dark);
+} */
+
+/* Các thiết lập cho tiêu đề (h1) */
+h1 {
+    @apply text-4xl leading-tight;
+}
+
+/* Các thiết lập cho nút (button) */
+/* button {
+    @apply cursor-pointer rounded border border-transparent px-4 py-2 text-base font-medium transition-colors;
+    background-color: var(--button-bg-color);
+} */
+/* button:hover {
+    border-color: var(--button-hover-color);
+}
+button:focus,
+button:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+} */
+
+/* Thiết lập cho chế độ sáng */
+@media (prefers-color-scheme: light) {
+    :root {
+        color: var(--text-color-light);
+        /* background-color: var(--bg-color-light); */
+    }
+    a:hover {
+        color: var(--link-hover-color-light);
+    }
+    button {
+        background-color: var(--button-light-bg-color);
+    }
+}
+
+@layer utilities {
+    .bg-pos-custom {
+        background-position: -46px 0;
+    }
+
+    .scroll-bar-0::-webkit-scrollbar {
+        width: 0px;
+    }
+
+    .scrollbar-color {
+        scrollbar-color: var(--mwp-message-row-background);
+    }
+
+    .scroll-snap-type-y {
+        scroll-behavior: smooth;
+        scroll-snap-type: y mandatory;
+    }
+
+    .scroll-snap-type-x {
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+    }
+
+    .scroll-snap-align-center {
+        scroll-snap-align: center;
+    }
+
+    .filter-story-note {
+        filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.15));
+    }
+
+    .box-shadow-share {
+        box-shadow: 4px 0 24px rgba(var(--web-always-black-1), 0.15);
+    }
+
+    .placeholder-search::placeholder {
+        color: var(--ig-icon-search);
+        font-weight: 300;
+    }
+
+    .tos-box-shadow {
+        box-shadow: 0 0 23px rgba(var(--tos-box-shadow), 0.2);
+    }
+
+    .bg-img-logo-ig {
+        background-image: url('./assets/img/InstagramLogo2.png');
+        background-size: auto;
+        background-position: 0px 0px;
+        background-repeat: no-repeat;
+        width: 48px;
+        height: 48px;
+        display: inline-block;
+    }
+}
+
+@layer utilities {
+    .embla_post {
+        margin: auto;
+        --slide-spacing: 0px;
+        --slide-size: 100%;
+    }
+    .embla__viewport_post {
+        overflow: hidden;
+    }
+    .embla__container_post {
+        display: flex;
+        touch-action: pan-y pinch-zoom;
+    }
+    .embla__slide_post {
+        transform: translate3d(0, 0, 0);
+        flex: 0 0 var(--slide-size);
+        min-width: 0;
+    }
+    .embla__controls_post {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        justify-content: space-between;
+        gap: 1.2rem;
+        margin-top: 1.8rem;
+    }
+}
+
+@layer utilities {
+    .embla_highlight {
+        max-width: 390px;
+        --slide-height: 140px;
+        --slide-spacing: 1rem;
+        --slide-size: 100%;
+    }
+    .embla__viewport_highlight {
+        overflow: hidden;
+    }
+    .embla__container_highlight {
+        display: flex;
+        touch-action: pan-y pinch-zoom;
+    }
+    .embla__slide_highlight {
+        transform: translate3d(0, 0, 0);
+        flex: 0 0 96px;
+        min-width: 0;
+        margin-left: 8px;
+    }
+
+    .embla__slide_highlight:first-child {
+        margin-left: 16px;
+    }
+}
+
+@layer utilities {
+    .embla_story_note {
+        max-width: 390px;
+        margin: auto;
+        --slide-height: 140px;
+        --slide-spacing: 1rem;
+        --slide-size: 100%;
+    }
+    .embla__viewport_story_note {
+        overflow: hidden;
+    }
+    .embla__container_story_note {
+        display: flex;
+        touch-action: pan-y pinch-zoom;
+    }
+    .embla__slide_story_note {
+        transform: translate3d(0, 0, 0);
+        flex: 0 0 96px;
+        min-width: 0;
+        margin-left: 8px;
+    }
+
+    .embla__slide_story_note:first-child {
+        margin-left: 16px;
+    }
+
+    .story-note-after::after {
+        content: '';
+        position: absolute;
+        bottom: -4px;
+        left: 12px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: var(--ig-bubble-background);
+        box-shadow: 4px 7px 0 -3px var(--ig-bubble-background);
+    }
+}
+
+/* Cropper Css */
+/* .reactEasyCrop_Container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    user-select: none;
+    touch-action: none;
+    cursor: move;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reactEasyCrop_Image,
+.reactEasyCrop_Video {
+    will-change: transform; 
+}
+
+.reactEasyCrop_Contain {
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.reactEasyCrop_Cover_Horizontal {
+    width: 100%;
+    height: auto;
+}
+.reactEasyCrop_Cover_Vertical {
+    width: auto;
+    height: 100%;
+}
+
+.reactEasyCrop_CropArea {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-sizing: border-box;
+    box-shadow: 0 0 0 9999em;
+    color: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.reactEasyCrop_CropAreaRound {
+    border-radius: 50%;
+}
+
+.reactEasyCrop_CropAreaGrid::before {
+    content: ' ';
+    box-sizing: border-box;
+    position: absolute;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    top: 0;
+    bottom: 0;
+    left: 33.33%;
+    right: 33.33%;
+    border-top: 0;
+    border-bottom: 0;
+}
+
+.reactEasyCrop_CropAreaGrid::after {
+    content: ' ';
+    box-sizing: border-box;
+    position: absolute;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    top: 33.33%;
+    bottom: 33.33%;
+    left: 0;
+    right: 0;
+    border-left: 0;
+    border-right: 0;
+} */
+
+/* End Cropper Css */
+
+/* grid posts */
+.grid-layout-posts {
+    grid-template-areas:
+        'A B C'
+        'D E C';
+}
+.grid-layout-posts-reverse {
+    grid-template-areas:
+        'C A B'
+        'C D E';
+}
+
+.grid-post-0 {
+    aspect-ratio: 1 / 1;
+    grid-area: A;
+}
+.grid-post-1 {
+    aspect-ratio: 1 / 1;
+    grid-area: B;
+}
+.grid-post-2 {
+    aspect-ratio: 1 / 1;
+    grid-area: D;
+}
+.grid-post-3 {
+    aspect-ratio: 1 / 1;
+    grid-area: E;
+}
+.grid-post-4 {
+    grid-area: C;
+}
+/* end grid posts */
+
+.virtuoso-scroller {
+    overflow-y: auto;
+    touch-action: pan-y;
+}

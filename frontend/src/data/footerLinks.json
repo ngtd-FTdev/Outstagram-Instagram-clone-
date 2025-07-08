@@ -1,0 +1,21 @@
+[
+    { "name": "Meta", "url": "https://www.meta.com" },
+    { "name": "About", "url": "https://about.instagram.com" },
+    { "name": "Blog", "url": "https://instagram.com/blog" },
+    { "name": "Jobs", "url": "https://www.meta.com/careers" },
+    { "name": "Help", "url": "https://help.instagram.com" },
+    { "name": "API", "url": "https://developers.facebook.com/docs/instagram" },
+    { "name": "Privacy", "url": "https://help.instagram.com/519522125107875" },
+    { "name": "Terms", "url": "https://help.instagram.com/581350967821146" },
+    {
+        "name": "Locations",
+        "url": "https://www.instagram.com/explore/locations/"
+    },
+    { "name": "Instagram Lite", "url": "https://instagram.com/lite" },
+    { "name": "Threads", "url": "https://www.threads.net/" },
+    {
+        "name": "Contact Uploading & Non-Users",
+        "url": "https://help.instagram.com/178634110325274"
+    },
+    { "name": "Meta Verified", "url": "https://www.meta.com/verified/" }
+]

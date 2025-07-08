@@ -1,0 +1,13 @@
+.ProseMirror {
+    height: 100%;
+    /* color: #fff; */
+    padding: 0 16px;
+    font-size: 16px;
+    line-height: 24px;
+    overflow-y: auto;
+}
+
+.mention-user, .mention-hashtag {
+    color: var(--ig-link);
+    cursor: default;
+}

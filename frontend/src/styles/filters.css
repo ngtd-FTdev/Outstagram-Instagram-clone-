@@ -1,0 +1,43 @@
+.filter-clarendon {
+    filter: contrast(1.2) saturate(1.35);
+}
+
+.filter-gingham {
+    filter: brightness(1.05) hue-rotate(-10deg);
+}
+
+.filter-moon {
+    filter: grayscale(1) contrast(1.1) brightness(1.1);
+}
+
+.filter-lark {
+    filter: contrast(0.9) brightness(1.1) sepia(0.05);
+}
+
+.filter-reyes {
+    filter: sepia(0.22) brightness(1.1) contrast(0.85) saturate(0.75);
+}
+
+.filter-juno {
+    filter: saturate(1.4) contrast(1.1) brightness(1.2);
+}
+
+.filter-slumber {
+    filter: saturate(0.66) brightness(1.05);
+}
+
+.filter-crema {
+    filter: sepia(0.5) contrast(1.25) brightness(1.15) saturate(0.9) hue-rotate(-2deg);
+}
+
+.filter-ludwig {
+    filter: contrast(1.05) brightness(1.05) saturate(2);
+}
+
+.filter-aden {
+    filter: saturate(0.8) contrast(1.2) brightness(1.2);
+}
+
+.filter-perpetua {
+    filter: contrast(1.1) brightness(1.25) saturate(1.1);
+} 

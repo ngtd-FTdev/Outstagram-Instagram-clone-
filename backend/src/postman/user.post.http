@@ -1,0 +1,17 @@
+@url_dev = http://localhost:5000/v1/api/user/
+
+### get user profile when logged in
+GET {{url_dev}}profile/66df1105e2a3180fd4a4097e
+Content-Type: application/json
+x-client-id: 66d5cbec9d3d1f4345975888
+Authorization: eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmQ1Y2JlYzlkM2QxZjQzNDU5NzU4ODgiLCJlbWFpbCI6IlR1YW5EYXRhM0BnbWFpbC5jb20iLCJpYXQiOjE3MjY1NjY4MzIsImV4cCI6MTcyNjczOTYzMn0.bWJxetiOEEmIrMvBP5VqckbWbGyftz5ucDL3TaAWAGUMea5DDBUD0_0gPLKmKJVlFKuKX05iWQi7eKXQdNMMIYC6eMmH31OOEVfn4EQwj670YvnScnNrRSkBffjCyz8HCTdth8jPIL8j7q5LYMGOM9UVUCOhUA4cbzajwVoxC7sWieEyZF9im6wECjgCUF5206eopqpt2s92TuOOYQ1na-K1WJCN2z8m9osdW4sbJBLwaMwOyOt6Fnl4yOn_IGfkRIT1ZCWaNjisfwiSp3_0OQ73yLFo2xNt3BT8GeeGpGIC6-X-a6Byva1Yhcwxp7Xlp1Pd-JtZR_aAC764lzhbyE01WRlcuyIc4HUpFnVIf1ZpUg_695odYAdrxFvetX5P__xjduTpO2nggQa_Mg2QlZ_f3dOWt0CjnLtHTXpjkVBVoxewgPEqeFyIc3-lTyCjSxnFFRjr1y295Wr2PqHks92vjDNN8dui9FfSjZm2x95uqhESoWXvFijnPkBlXa2vzj0PiofB5bZVOGdlmAjqx-mrp-dkTqlhottZV1MAqJWTM_hInCqqtUJ4ebMKTyF4w4hCX2pGmdG21K18Vpmii-lxl2uKZalMo8UnvXNuuRVMqWOwvaEWs_ebLlQE_L6eLJge53rPmWEdWTTdiKHKV8Zgh1az6O1vetXAQdQ5sFU
+
+### edit profile picture
+PATCH {{url_dev}}
+Content-Type: multipart/form-data; boundary=---011000010111000001101001
+---011000010111000001101001
+Content-Disposition: form-data; name="file"; filename="example.jpg"
+Content-Type: image/jpeg
+
+< ./path/to/your/file/example.jpg
+---011000010111000001101001--

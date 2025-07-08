@@ -1,0 +1,19 @@
+/* Đảm bảo video element fill toàn bộ container */
+.str-video__participant-view {
+    width: 100% !important;
+    height: 100% !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.str-video__video {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain; /* Hoặc contain tùy theo nhu cầu */
+}
+
+/* Ẩn participant details */
+.str-video__participant-details {
+    display: none !important;
+}

@@ -1,0 +1,10 @@
+<svg fill="url(#gradient)" role="img" class="h-full w-full" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-23.58 -23.58 518.77 518.77" xml:space="preserve">
+ <defs>
+    <linearGradient id="gradient" x1="-90%" y1="-90%" x2="100%" y2="100%" gradientTransform="rotate(-80)">
+        <stop offset="22%" stopColor="rgba(241, 255, 0, 1)" />
+        <stop offset="47%" stopColor="rgba(255, 136, 0, 1)" />
+        <stop offset="74%" stopColor="rgba(213, 0, 255, 1)" />
+        <stop offset="100%" stopColor="rgba(255, 0, 138, 1)" />
+    </linearGradient>
+</defs>
+<g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="3.7728960000000002"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M68.987,402.624c91.98,91.983,241.652,91.983,333.636,0c91.983-91.977,91.983-241.658,0-333.639s-241.655-91.98-333.636,0 S-22.993,310.642,68.987,402.624z M87.29,87.276c81.899-81.896,215.152-81.896,297.052,0c81.882,81.894,81.882,215.154,0,297.055 c-81.899,81.887-215.164,81.887-297.052,0C5.394,302.431,5.394,169.17,87.29,87.276z"></path> </g> </g></svg>

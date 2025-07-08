@@ -1,0 +1,17 @@
+@url_dev = http://localhost:5000/v1/api/messages/
+
+### create group conversation
+POST {{url_dev}}createGroupConversation
+Content-Type: application/json
+
+{
+    "memberIds": ["683035d2eda0d497512d66cc", "683036b7eda0d497512d66de"]
+}
+
+### handle new message
+POST {{url_dev}}sendMessage/5Dbbg9f1bfZxecj8CMNFbt
+Content-Type: application/json
+
+{
+    "text": "hehe1"
+}

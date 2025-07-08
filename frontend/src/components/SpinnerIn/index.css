@@ -1,0 +1,43 @@
+.spinner {
+    animation: spinner-rotate 2s linear infinite;
+    transform-origin: 50% 50%;
+  }
+  
+  .spinner-ring {
+    stroke: currentColor;
+    animation: spinner-dash 2s ease-in-out infinite;
+    transform-origin: 50% 50%;
+  }
+  
+  @keyframes spinner-rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes spinner-dash {
+    0% {
+      stroke-dashoffset: 13.8px;
+      transform: rotate(-90deg);
+    }
+    25% {
+      stroke-dashoffset: 62.2px;
+      transform: rotate(162deg);
+    }
+    50% {
+      stroke-dashoffset: 31.1px;
+      transform: rotate(72deg);
+    }
+    75% {
+      stroke-dashoffset: 62.2px;
+      transform: rotate(162deg);
+    }
+    100% {
+      stroke-dashoffset: 13.8px;
+      transform: rotate(-90deg);
+    }
+  }
+  
